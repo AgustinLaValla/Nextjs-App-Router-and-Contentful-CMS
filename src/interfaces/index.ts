@@ -1,0 +1,1 @@
+export type { PostSkeleton, Post } from './Post.interface';
