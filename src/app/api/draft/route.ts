@@ -24,6 +24,9 @@ export async function GET(request: Request) {
 
   draftMode().enable();
 
-  redirect(`/posts/${post.fields.slug}`);
+  const url = `/posts/${post.fields.slug}`;
+  // redirect(`/posts/${post.fields.slug}`);
+  return new Response(null, { status: 307, headers: { location: url } })
+
 
 };
